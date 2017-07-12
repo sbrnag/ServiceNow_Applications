@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="snowdocs">8edd13034f373200ff3a47f18110c729</basic_auth_profile>
+        <basic_auth_user/>
+        <description>This webservice is to commit the attachment into github.</description>
+        <name>GitHub Create File</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://api.github.com/repos/SnowDocs/dumps_materials_docs/contents/</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-12 08:16:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>613f329f4f7b3200ff3a47f18110c74b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GitHub Create File</sys_name>
+        <sys_package display_value="GitHub" source="x_98418_github">ab7f5a034fb33200ff3a47f18110c734</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="GitHub">ab7f5a034fb33200ff3a47f18110c734</sys_scope>
+        <sys_update_name>sys_rest_message_613f329f4f7b3200ff3a47f18110c74b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-12 08:16:53</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Documents" max_length="40" name="x_98418_github_documents" type="collection">
+        <element label="ContributorEmail" max_length="90" name="contributor" type="string"/>
+        <element label="ContributorName" max_length="40" name="contributorname" type="string"/>
+        <element label="ErrorInUpload" max_length="40" name="errorinupload" type="boolean"/>
+        <element default="1000" label="ErrroMessage" max_length="40" name="errromessage" type="string"/>
+        <element label="Files" max_length="1000" name="files" type="string"/>
+        <element label="FilesCount" max_length="40" name="filescount" type="integer"/>
+        <element label="Folder" max_length="90" name="folder" type="string"/>
+    </element>
+</database>

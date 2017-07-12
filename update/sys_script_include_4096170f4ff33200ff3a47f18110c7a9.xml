@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_98418_github.getAttachments</api_name>
+        <client_callable>false</client_callable>
+        <description>Script include to get the attachments attached to the document.</description>
+        <name>getAttachments</name>
+        <script><![CDATA[function getAttachments(docId) {
+	gs.info('<script include : getAttachments> execution starts');
+	var attachments = [];
+	var gr = new GlideRecord('sys_attachment');
+    gr.addQuery('table_sys_id',docId);
+    gr.query();
+    while (gr.next()) {
+		gs.info('<script include : getAttachments> file name :: ' + gr.getValue('file_name') + ' id :: ' + gr.getValue('sys_id'));
+		var attachmentApi = new GlideSysAttachment();
+		var encData = attachmentApi.getContentBase64(gr);
+		var file = { "id" : gr.getValue('sys_id'), "name" : gr.getValue('file_name'), "content" : encData };
+        attachments.push(file);
+    }
+	gs.info('<script include : getAttachments> execution end');
+	return attachments;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-11 15:24:51</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4096170f4ff33200ff3a47f18110c7a9</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>getAttachments</sys_name>
+        <sys_package display_value="GitHub" source="x_98418_github">ab7f5a034fb33200ff3a47f18110c734</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="GitHub">ab7f5a034fb33200ff3a47f18110c734</sys_scope>
+        <sys_update_name>sys_script_include_4096170f4ff33200ff3a47f18110c7a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-12 10:53:05</sys_updated_on>
+    </sys_script_include>
+</record_update>
