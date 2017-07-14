@@ -40,7 +40,12 @@
 			var fileId = files[i].id;
 			var fileName = files[i].name;
 			var encContent = files[i].content;
-			var path = x_98418_github.replaceSpaceWith_(current.folder+'/'+fileName);
+			var path = "";
+			if(current.folder) {
+				path = x_98418_github.replaceSpaceWith_(current.folder+'/'+fileName);
+			} else {
+				path = x_98418_github.replaceSpaceWith_(fileName);
+			}
 			
 			//call the rest web service to upload the file into github
 						
@@ -100,7 +105,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5703fe5b4f7b3200ff3a47f18110c781</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Upload To GitHub</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub" source="x_98418_github">ab7f5a034fb33200ff3a47f18110c734</sys_package>
@@ -109,7 +114,7 @@
         <sys_scope display_value="GitHub">ab7f5a034fb33200ff3a47f18110c734</sys_scope>
         <sys_update_name>sys_script_5703fe5b4f7b3200ff3a47f18110c781</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-13 06:56:58</sys_updated_on>
+        <sys_updated_on>2017-07-13 10:50:07</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

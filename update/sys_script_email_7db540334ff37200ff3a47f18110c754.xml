@@ -6,11 +6,14 @@
         <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
           /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
           /* Optional GlideRecord */ event) {
-
+          
           // Add your code here
+	      email.addAddress("bcc","nprasad.sbr@gmail.com","Nprasd SBR");
 	      template.print('Hello ' + current.contributorname + ', <br /><br /><br />');
 	     if(current.errorinupload) {
-			 template.print('Something went worng; Please try again. Make sure that your email subject is proper and meaningful <br />');  
+			 template.print('Something went worng; Please try again. Make sure that your email subject is proper and meaningful. <br />'); 
+			 template.print('Tips : Try to change the file name you upload right now system dose not allow overwrite.<br />'); 
+			 template.print('Note : If the error persists please forward the mail to sntraning@gmail.com we can help in upload.<br />'); 
 		 } else {
 			 template.print('Files Uploaded To GitHub Sucessfully <br /><br /><br />');  
 			 var fileUrls = current.files.split(',');
@@ -30,7 +33,7 @@
         <sys_created_on>2017-07-13 08:04:59</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>7db540334ff37200ff3a47f18110c754</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Reply Notification</sys_name>
         <sys_package display_value="GitHub" source="x_98418_github">ab7f5a034fb33200ff3a47f18110c734</sys_package>
         <sys_policy/>
@@ -38,6 +41,6 @@
         <sys_scope display_value="GitHub">ab7f5a034fb33200ff3a47f18110c734</sys_scope>
         <sys_update_name>sys_script_email_7db540334ff37200ff3a47f18110c754</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-13 08:41:03</sys_updated_on>
+        <sys_updated_on>2017-07-13 13:10:06</sys_updated_on>
     </sys_script_email>
 </record_update>

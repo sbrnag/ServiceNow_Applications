@@ -22,7 +22,7 @@
 	if(subject) { 
 		if(subject.includes("fw") || subject.includes("fwd") || subject.includes("Fw") || subject.includes("Fwd")) { //to handle the forward mails
 		  var index = subject.indexOf(":");
-	      str = str.substr(index+1, subject.length);
+	      subject = subject.substr(index+1, subject.length);
 		}
 	}
     current.folder = subject.trim();
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d850e6834fb33200ff3a47f18110c7d5</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Docs Upload</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub" source="x_98418_github">ab7f5a034fb33200ff3a47f18110c734</sys_package>
@@ -46,7 +46,7 @@
         <sys_scope display_value="GitHub">ab7f5a034fb33200ff3a47f18110c734</sys_scope>
         <sys_update_name>sysevent_in_email_action_d850e6834fb33200ff3a47f18110c7d5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-13 09:39:52</sys_updated_on>
+        <sys_updated_on>2017-07-13 10:06:21</sys_updated_on>
         <table>x_98418_github_documents</table>
         <template/>
         <type>new</type>
